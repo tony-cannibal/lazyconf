@@ -18,6 +18,13 @@ require("lazy").setup({
         priority=1000,
     },
     {
+        'lewis6991/gitsigns.nvim',
+        event = "BufEnter",
+        config = function()
+            require('gitsigns').setup()
+        end
+    },
+    {
         "rebelot/heirline.nvim",
         event = "BufEnter",
         dependencies = {

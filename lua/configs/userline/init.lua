@@ -13,14 +13,14 @@ local Location = require("configs.userline.location")
 local FileName = require("configs.userline.filename")
 -- local Diagnostics = require("configs.userline.diagnostics")
 local LSPActive = require("configs.userline.lsp-active")
--- local Git = require("configs.userline.git-status")
+local Git = require("configs.userline.git-status")
 
 local Align = { provider = "%=" }
 local Space = { provider = " " }
 
 
 local StatusLine = {
-    { { ViMode }, },   --{ Diagnostics }, { Git } },
+    { { ViMode }, { Git }},   --{ Diagnostics }, { Git } },
     { Align },
     { { LSPActive }, { FileName },    { Location.Ruler, Location.ScrollBar, Space } }
 }
