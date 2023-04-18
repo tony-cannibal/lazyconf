@@ -16,9 +16,14 @@ end
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
+
 local border_opts = {
     border = "single",
     winhighlight = "Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None",
+    max_height = 15,
+    max_width = 60,
+    col_offset = 0,
+    side_padding = 1,
 }
 
 cmp.setup({
