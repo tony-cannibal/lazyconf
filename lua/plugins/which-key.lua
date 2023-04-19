@@ -1,8 +1,6 @@
 return {
     "folke/which-key.nvim",
     config = function()
-        vim.o.timeout = true
-        vim.o.timeoutlen = 300
         local which_key = require("which-key")
         local setup = {
             plugins = {
@@ -96,14 +94,14 @@ return {
             },
             ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
             ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
-            p = {
-                name = "Packer",
-                c = { "<cmd>PackerCompile<cr>", "Compile" },
-                i = { "<cmd>PackerInstall<cr>", "Install" },
-                s = { "<cmd>PackerSync<cr>", "Sync" },
-                S = { "<cmd>PackerStatus<cr>", "Status" },
-                u = { "<cmd>PackerUpdate<cr>", "Update" },
-            },
+            -- p = {
+            --     name = "Packer",
+            --     c = { "<cmd>PackerCompile<cr>", "Compile" },
+            --     i = { "<cmd>PackerInstall<cr>", "Install" },
+            --     s = { "<cmd>PackerSync<cr>", "Sync" },
+            --     S = { "<cmd>PackerStatus<cr>", "Status" },
+            --     u = { "<cmd>PackerUpdate<cr>", "Update" },
+            -- },
             -- g = {
             --   name = "Git",
             --   g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
@@ -186,10 +184,5 @@ return {
 
         which_key.setup(setup)
         which_key.register(mappings, opts)
-        -- require("which-key").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-        -- })
     end,
 }
