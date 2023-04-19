@@ -51,7 +51,7 @@ return {
                 completion = cmp.config.window.bordered(border_opts),
                 documentation = cmp.config.window.bordered({
                     max_height = 15,
-                    max_width = 60,
+                    max_width = 50,
                     border = "single",
                     col_offset = 0,
                     side_padding = 1,
