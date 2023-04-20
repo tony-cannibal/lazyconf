@@ -9,7 +9,9 @@ return {
         require("nvim-treesitter.install").update({ with_sync = true })
     end,
     config = function()
-        -- require("configs.nvim-treesitter")
+        if vim.fn.has("win32") == 1 then
+            require 'nvim-treesitter.install'.compilers = { "clang" }
+        end
         require 'nvim-treesitter.configs'.setup {
             -- A list of parser names, or "all"
             ensure_installed = { "lua", "python", "rust" },

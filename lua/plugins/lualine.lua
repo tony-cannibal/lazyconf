@@ -5,7 +5,6 @@ return {
         'nvim-tree/nvim-web-devicons'
     },
     config = function()
-        -- require("configs.lualine-nvim")
         local progress = function()
             local current_line = vim.fn.line(".")
             local total_lines = vim.fn.line("$")
@@ -24,25 +23,6 @@ return {
                 return ""
             end
         end
-
-        -- local lsp_name = function()
-        --     local msg = ''
-        --     -- local icon = ' LSP:'
-        --     local icon = ' '
-        --     -- local icon = ' LSP'
-        --     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-        --     local clients = vim.lsp.get_active_clients()
-        --     if next(clients) == nil then
-        --         return msg
-        --     end
-        --     for _, client in ipairs(clients) do
-        --         local filetypes = client.config.filetypes
-        --         if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        --             return icon .. client.name
-        --             -- return icon
-        --         end
-        --     end
-        -- end
 
         local lsp_name2 = function()
             local names = {}

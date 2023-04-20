@@ -2,7 +2,6 @@ return {
     "akinsho/toggleterm.nvim",
     cmd = "ToggleTerm",
     config = function()
-        -- require("configs.toggleterm-nvim")
         require("toggleterm").setup({
             size = 20,
             open_mapping = [[<c-\>]],
@@ -17,7 +16,7 @@ return {
             close_on_exit = true,
             shell = vim.o.shell,
             float_opts = {
-                border = "curved",
+                border = "single",
                 winblend = 0,
                 highlights = {
                     border = "Normal",

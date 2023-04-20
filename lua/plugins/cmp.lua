@@ -11,6 +11,7 @@ return {
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim"
     },
+    event = "InsertEnter",
     config = function()
         -- require("configs.nvim-cmp")
         local cmp = require("cmp")

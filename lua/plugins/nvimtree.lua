@@ -2,7 +2,6 @@ return {
     "nvim-tree/nvim-tree.lua",
     cmd = "NvimTreeToggle",
     config = function()
-        -- require("configs.nvim-tree")
         local nvim_tree = require("nvim-tree")
         local nvim_tree_config = require("nvim-tree.config")
         local tree_cb = nvim_tree_config.nvim_tree_callback

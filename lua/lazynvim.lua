@@ -28,10 +28,11 @@ require("lazy").setup("plugins", {
 function ColorPencil(color, trans)
     vim.g.gruvbox_material_background = 'hard'
 
+
+
     if color == "gruvbox" then
         vim.cmd [[highlight IndentBlanklineIndent1 guifg=#555555 gui=nocombine]]
     end
-
 
     vim.cmd.colorscheme(color)
     if trans == true then

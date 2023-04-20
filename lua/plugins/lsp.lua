@@ -6,10 +6,9 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "lukas-reineke/lsp-format.nvim",
     },
-    -- event = "BufEnter",
+    event = "BufEnter",
     lazy = false,
     config = function()
-        -- require("configs.nvim-lsp")
         require("mason").setup({
             ui = {
                 border = "single",

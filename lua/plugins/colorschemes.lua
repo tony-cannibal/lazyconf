@@ -34,17 +34,39 @@ return {
     {
         "ellisonleao/gruvbox.nvim",
         -- priority = 1000,
-        opts = {
-            italic = {
-                strings = false,
-                comments = false,
-                operators = false,
-                folds = false,
-            },
-            contrast = "hard", -- can be "hard", "soft" or empty string
-            transparent_mode = false,
-        }
+        -- opts = {
+        --     italic = {
+        --         strings = false,
+        --         comments = false,
+        --         operators = false,
+        --         folds = false,
+        --     },
+        --     contrast = "hard", -- can be "hard", "soft" or empty string
+        --     transparent_mode = false,
+        -- },
+        config = function()
+            local bright_blue = "#83a598"
+            local bright_aqua = "#8ec07c"
+            local bright_red = "#fb4934"
+            require("gruvbox").setup({
+                italic = {
+                    strings = false,
+                    comments = false,
+                    operators = false,
+                    folds = false,
+                },
+                contrast = "hard", -- can be "hard", "soft" or empty string
+                transparent_mode = false,
+                overrides = {
+                    Function     = { fg = bright_blue },
+                    FunctionCall = { fg = bright_blue },
+                    Field        = { fg = bright_aqua },
+                    Identifier   = { fg = bright_aqua },
+                    Statement    = { fg = bright_aqua },
+                    Include      = { fg = bright_red }
+                }
+            })
+        end
     },
-    -- { 'shaunsingh/solarized.nvim' },
     { 'maxmx03/solarized.nvim' },
 }
