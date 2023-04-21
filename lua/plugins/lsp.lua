@@ -5,6 +5,7 @@ return {
         "neovim/nvim-lspconfig",
         "hrsh7th/cmp-nvim-lsp",
         "lukas-reineke/lsp-format.nvim",
+        "folke/neoconf.nvim",
         "folke/neodev.nvim",
     },
     event = "BufEnter",
@@ -79,6 +80,10 @@ return {
 
         require("neodev").setup({
             -- add any options here, or leave empty to use the default settings
+        })
+
+        require("neoconf").setup({
+            -- override any of the default settings here
         })
 
         require('mason-lspconfig').setup_handlers({
