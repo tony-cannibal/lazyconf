@@ -60,6 +60,7 @@ return {
                 section_separators = { left = '', right = '' },
                 -- section_separators = { left = '', right = '' },
                 disabled_filetypes = { "alpha", "NvimTree" },
+                -- disabled_filetypes = { "alpha" },
                 ignore_focus = {},
                 always_divide_middle = true,
                 globalstatus = false,

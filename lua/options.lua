@@ -41,11 +41,13 @@ local options = {
     winblend = 0,
     wildoptions = "pum",
     pumblend = 5,
+    ma = true,
 }
 
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
+
 
 -- vim.opt.listchars:append "space:⋅"
 -- vim.opt.listchars:append "eol:↴"
