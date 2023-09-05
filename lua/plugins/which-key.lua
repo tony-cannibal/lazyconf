@@ -35,7 +35,7 @@ return {
             icons = {
                 breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
                 separator = "➜", -- symbol used between a key and it's label
-                group = "+",      -- symbol prepended to a group
+                group = "+", -- symbol prepended to a group
             },
             popup_mappings = {
                 scroll_down = "<c-d>", -- binding to scroll down inside the popup
@@ -178,7 +178,9 @@ return {
             },
             d = {
                 name = "Debug",
-                u = { '<cmd>lua require("dapui").toggle()<CR>', "Toggle Dap Ui" },
+                b = { '<cmd> DapToggleBreakpoint <CR>', 'Add breakpoint at line.' },
+                u = { '<cmd> lua require("dapui").toggle() <CR>', "Toggle Dap Ui." },
+                c = { '<cmd> DapContinue <CR>', "Star or continue the debugger." },
             },
         }
 
