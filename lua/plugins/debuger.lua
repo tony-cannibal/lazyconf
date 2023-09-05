@@ -26,11 +26,26 @@ return {
             "mfussenegger/nvim-dap",
         },
         opts = {
-            handlers = {}
-            -- ensure_installed = { "python" }
-        }
+            handlers = {},
+            ensure_installed = { "python" }
+        },
+        config = function()
+            require("mason-nvim-dap").setup()
+        end
     },
     {
         'mfussenegger/nvim-dap'
+    },
+    {
+        'mfussenegger/nvim-dap-python',
+        ft = "python",
+        dependencies = {
+            'mfussenegger/nvim-dap',
+            "rcarriga/nvim-dap-ui"
+        },
+        config = function()
+            local path = "C:/Users/YR PROD ORDER/AppData/Local/nvim-data/mason/packages/debugpy/venv/Scripts/python.exe"
+            require('dap-python').setup(path)
+        end
     }
 }
